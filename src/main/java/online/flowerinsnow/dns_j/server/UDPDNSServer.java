@@ -57,7 +57,6 @@ public abstract class UDPDNSServer implements AutoCloseable {
                                             logger.info("--------- END DNS RESPONSE ({}) ---------", msg.sender());
                                             // 将响应内容返回给查询客户端
                                             ctx.writeAndFlush(response).sync();
-                                            ctx.close().sync();
                                         }
                                     });
                         }
